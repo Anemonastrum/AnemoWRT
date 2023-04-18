@@ -1,2 +1,2 @@
 # AnemoWRT
-Openwrt for s905x
+Openwrt for Amlogic Based Devices
