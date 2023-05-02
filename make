@@ -10,25 +10,25 @@ amlogic_path="${make_path}/anemo"
 armbian_path="${amlogic_path}/armbian"
 kernel_path="${amlogic_path}/kernel"
 uboot_path="${amlogic_path}/u-boot"
-configfiles_path="${amlogic_path}/config"
+configfiles_path="${amlogic_path}/config/configurations"
 amlogic_model_conf="${configfiles_path}/rootfs/etc/model_database.txt"
 bootfs_path="${configfiles_path}/bootfs"
 openvfd_path="${configfiles_path}/rootfs/usr/share/openvfd"
 # Add custom openwrt firmware information
-op_release="etc/flippy-openwrt-release"
+op_release="etc/openwrt-release"
 # Dependency files download repository
 depends_repo="https://github.com/835732349/amlogic-s9xxx-armbian/tree/main/build-armbian"
 # Install/Update script files download repository
 script_repo="script_repo="https://github.com/ophub/luci-app-amlogic/tree/main/luci-app-amlogic/root/usr/sbin""
 # Kernel files download repository
-kernel_repo="https://github.com/ophub/kernel/tree/main/pub"
+kernel_repo="https://github.com/Anemonastrum/AnemoWRT"
 version_branch="stable"
-auto_kernel="true"
-stable_kernel=("6.1.1" "5.15.1")
+auto_kernel="false"
+stable_kernel=("6.1.24" "6.3.1")
 # Set supported board
 build_openwrt=(
-    "b860h"
-    "hg680p"
+    "B860H"
+    "HG680P"
 )
 # Set OpenWrt firmware size (Unit: MiB, SKIP_MB >= 4, BOOT_MB >= 256, ROOT_MB >= 512)
 SKIP_MB="68"
